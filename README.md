@@ -3,7 +3,7 @@ This is a simple snake game variant I made one afternoon after a test. I based t
 
 Both the HTML and CSS are very basic as I was just trying to play around and get a nice looking page to play the game on.
 
-The JavaScript file is partially based off of a YouTube video: Snake Game Using JavaScript https://www.youtube.com/watch?v=9TcU2C1AACw&index=4&t=1133s&list=WL
+The JavaScript file is partially based off of a YouTube video: Snake Game Using JavaScript https://www.youtube.com/watch?v=9TcU2C1AACw
 but I have changed and added many different parts. I was mostly using the video as a guideline to make sure I stayed on the right track.
 _____________________________________
 To run the game you simply have to download the zip, unzip it, and then open wpksnake.html.
