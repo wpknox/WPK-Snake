@@ -5,6 +5,8 @@ var running = false;
 * These are magic numbers that will be wrong on different screen sizes
 * I will fix this after I get out of school, but for now, they are used
 * good for a screen size of 1920x1080
+*
+* Need to also fix magic numbers for the seWall and placeFood()
 */
 const randMultiply = 6;
 const vertX = 9;
