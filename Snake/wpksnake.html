@@ -24,8 +24,17 @@
   </h3>
   <input id="start" type="button" class="button" value="Start" onclick="run()" />
   <p>
-    <canvas id="canvas" class="canvas" width="1200" height="800"></canvas>
+    <canvas id="canvas" class="canvas"></canvas>
   </p>
 </body>
-
+<script type="text/javascript">
+  function setWidth(){
+    document.getElementById("canvas").width = window.innerWidth / 2;
+  }
+  function setHeight(){
+    document.getElementById("canvas").height = screen.height * (2/3);
+  }
+  window.onload = setWidth();
+  window.onload = setHeight();
+</script>
 </html>

@@ -1,15 +1,20 @@
 /*jshint esversion: 6*/
 
 var running = false;
+/*
+* These are magic numbers that will be wrong on different screen sizes
+* I will fix this after I get out of school, but for now, they are used
+* good for a screen size of 1920x1080
+*/
 const randMultiply = 6;
 const vertX = 9;
-const vertY = 13;
+const vertY = 11;
 const vertLength = 6;
-const horX = 32;
-const horY = 5;
+const horX = 29;
+const horY = 4;
 const horLength = 7;
-const xX = 44;
-const xY = 24;
+const xX = 32;
+const xY = 20;
 const xLength = 9;
 
 function run() {
@@ -86,8 +91,9 @@ function run() {
     while (!good) {
       /* Need the Math.floor() so the food lines up properly,
        * otherwise the snake might not be able to eat it! */
-      newX = Math.floor(Math.random() * 59 + 1) * moveUnit;
-      newY = Math.floor(Math.random() * 39 + 1) * moveUnit;
+      /* Fix magic numbers during summer! */
+      newX = Math.floor(Math.random() * 35 + 1) * moveUnit;
+      newY = Math.floor(Math.random() * 35 + 1) * moveUnit;
       // Can probably change conditional to  if (good)... then won't need continue
       good = foodObsCheck(snake, newX, newY);
       if (good)
@@ -181,28 +187,31 @@ function run() {
   }
 
   // Place "wall" in lower left corner
+  // Poorly made with magic numbers that
+  // only work with a 1920x1080 screen
+  // will fix after classes get out!
   function placeSeWall() {
     let seBlockTop = {
       x: 0,
-      y: 31 * moveUnit
+      y: 27 * moveUnit
     };
     seWall.unshift(seBlockTop);
     let i = 0;
     while (i < 5) {
       let seDiag = {
         x: (3 + i) * moveUnit,
-        y: (31 + i) * moveUnit
+        y: (27 + i) * moveUnit
       };
       seWall.unshift(seDiag);
       i++;
     }
     let seBlockBot1 = {
       x: (2 + i) * moveUnit,
-      y: (32 + i) * moveUnit
+      y: (28 + i) * moveUnit
     };
     let seBlockBot2 = {
       x: (2 + i) * moveUnit,
-      y: (33 + i) * moveUnit
+      y: (29 + i) * moveUnit
     };
     seWall.unshift(seBlockBot1);
     seWall.unshift(seBlockBot2);
