@@ -1,6 +1,7 @@
 /*jshint esversion: 6*/
 
 var running = false;
+var randMultiply = 6;
 /*
 * These are magic numbers that will be wrong on different screen sizes
 * I will fix this after I get out of school, but for now, they are used
@@ -8,16 +9,19 @@ var running = false;
 *
 * Need to also fix magic numbers for the seWall and placeFood()
 */
-const randMultiply = 6;
-const vertX = 9;
-const vertY = 11;
-const vertLength = 6;
-const horX = 29;
-const horY = 4;
-const horLength = 7;
-const xX = 32;
-const xY = 20;
-const xLength = 9;
+
+// When I start working on this. I should set these to zero and see
+// if I can reproduce these numbers with my math equations I make
+// using the canvas width and height.
+var vertX = 9; //9
+var vertY = 11; //11
+var vertLength = 6; //6
+var horX = 29; //29
+var horY = 4; //4
+var horLength = 7; //7
+var xX = 32; //32
+var xY = 20; //20
+var xLength = 9; //9
 
 function run() {
   // Preventing multiple games running at once
@@ -33,6 +37,7 @@ function run() {
   background.src = "./bgsnake.jpg";
   const width = document.getElementById("canvas").width;
   const height = document.getElementById("canvas").height;
+  //adjustObsSetters();
   var snake = [];
   snake[0] = {
     x: 1 * moveUnit,
@@ -45,6 +50,7 @@ function run() {
   var vertOb = [];
   var horOb = [];
   var xOb = [];
+  //its actually the southwest wall... whoops. Probably will remove it anyway
   var seWall = [];
   placeVert();
   placeHor();
@@ -270,6 +276,21 @@ function run() {
       ctx.fillRect(obstacle[i].x, obstacle[i].y, moveUnit, moveUnit);
       ctx.strokeRect(obstacle[i].x, obstacle[i].y, moveUnit, moveUnit);
     }
+  }
+
+
+  /*
+  *  This function will update the magic numbers
+  *  for the obstacles depending on screen size.
+  *  First I will need to figure out how to find the numbers I am using
+  *  currently using some math that takes the size of the canvas.
+  *  After I do that, I should have basically an equation for each
+  *  variable so I will then be able to scale those numbers for the size
+  *  of the canvas the game is being played on.
+  */
+
+  function adjustObsSetters() {
+
   }
 
   function draw() {
