@@ -11,13 +11,6 @@ To run the game you simply have to download the zip, unzip it, and then open wpk
 The goal of the game is to eat as much food as you can and get the highest score possible.
 
 As of right now, the snake can collide with itself. I kind of like the idea of having a snake that can run over itself, so I think I am going to keep that feature. To counteract this, there will be obstacles on the screen that the snake will have to avoid.
-_______________________
-### Goals
-Add more obstacles to the map. Most obstacles will generate a semi-random position each time you place, but some will remain constant. Eventually, want some obstacles to not spawn everytime a game is started.
-
-Clean up code in JS file more. For example, will eventually create an array of obstacles that stores each obstacle on the map. Then I can iterate through the obstacle array to check if the snake/food touched the obstacles instead of using multiple **if** statements in a row.  
-
-Eventually, when I am happy with this small game, I will put it on its own website. That will be down the road though, as I have many things I want to add before then.
 __________________________
 ### Known issues
 Because the snake can collide with itself, you can effectively make the snake do an instant 180 if you are fast enough at pressing the arrow keys. For example, if you are going left and quickly press the down arrow followed by the right arrow, the snake will appear to turn around. This is because the eventListener listens for new key presses faster than the snake is drawn to the canvas. I could speed up the draw rate, but then the snake would move extremely fast and I think that would detract from the game.
