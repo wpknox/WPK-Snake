@@ -3,16 +3,11 @@
 var running = false;
 var randMultiply = 6;
 /*
-* These are magic numbers that will be wrong on different screen sizes
-* I will fix this after I get out of school, but for now, they are used
-* good for a screen size of 1920x1080
-*
+* These are magic numbers that will be wrong on screen sizes that are NOT 1920x1080.
+* 
 * Need to also fix magic numbers for the seWall and placeFood()
 */
 
-// When I start working on this. I should set these to zero and see
-// if I can reproduce these numbers with my math equations I make
-// using the canvas width and height.
 var vertX = 9; //9
 var vertY = 11; //11
 var vertLength = 6; //6
@@ -197,7 +192,6 @@ function run() {
   // Place "wall" in lower left corner
   // Poorly made with magic numbers that
   // only work with a 1920x1080 screen
-  // will fix after classes get out!
   function placeSeWall() {
     let seBlockTop = {
       x: 0,
